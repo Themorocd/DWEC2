@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+var repetir = false;
+var numero1;
+var numero2;
+var numero3;
+do{
+        numero1 = prompt("Introduzca el primer");
+        if (parseInt(numero1)) {
+            repetir = false;
+        }else{
+            repetir = true;
+        }if (numero1<= 50 && numero1 >0) {
+            repetir = false;
+        }else{
+            repetir = true;
+        }
+    }while(repetir);
+    
+    do{
+        numero2 = prompt("Introduzca el segundo");
+        if (parseInt(numero2)) {
+            repetir = false;
+        }else{
+            repetir = true;
+        }if (numero2<= 50 && numero2 >0) {
+            repetir = false;
+        }else{
+            repetir = true;
+        }
+    }while(repetir);
+    
+    do{
+        numero3 = prompt("Introduzca el tercer");
+        if (parseInt(numero3)) {
+            repetir = false;
+        }else{
+            repetir = true;
+        }if (numero3<= 50 && numero3 >0) {
+            repetir = false;
+        }else{
+            repetir = true;
+        }
+    }while(repetir);
+
+    var x = Math.min(numero1,numero2,numero3);
+    var y = Math.max(numero1,numero2,numero3);
+    var z = (parseInt(numero1)+parseInt(numero2)+parseInt(numero3))- x -y
+
+   document.write(y);
+   document.write("<br>");
+   document.write(z);
+   document.write("<br>");
+   document.write(x);
+
+</script>
+</body>
+</html>

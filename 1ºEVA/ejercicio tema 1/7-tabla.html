@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Realiza un script que pida un número de filas y un número de columnas y escriba una tabla.
+        El número de filas y columnas introducidas debe ser mayor o igual a 10 (las filas ) y menor 
+        o igual a 20 (las columnas) . Si el dato no es correcto me lo vuelve a pedir. En la tabla en 
+        cada celda escribirá un número consecutivo en orden  descendente. Si, por ejemplo, la tabla es 
+        de 10×15 los números irán del 150 al 1.
+        */
+
+        do{
+            var fila=prompt("Introduzca el numero de filas (Mayor o igual a 10)");
+            
+        }while ((fila<10 || fila==="") || isNaN(fila));
+
+        do{
+            var colum=prompt("Introduzca el numero de columnas (Mayor o igual a 20)");
+
+        }while ((colum>20 || colum==="") || isNaN(colum));
+
+        var nums = fila*colum;
+        document.write("<table>");
+        
+        
+        for (var i = 0; i < fila; i++) {
+            document.write("<tr>");
+            for (var j = 0; j < colum; j++) {
+                document.write("<td>"+nums+"</td>");
+                nums--;
+                
+            }
+            document.write("<tr>");
+             
+           
+        }
+       
+        document.write("</table>");
+        
+    </script>
+    
+</body>
+</html>

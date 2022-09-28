@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadena</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    /*
+    Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, 
+    la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+    */
+
+    var cadena = prompt("Introduce una palabra o frase");
+    var texto = mayMinAmbas(cadena);
+    alert("La palabra "+cadena+" esta formada por "+texto);
+
+    function mayMinAmbas(cadena){
+        if(cadena===cadena.toUpperCase()){
+            return "mayusculas";
+        }else if(cadena===cadena.toLowerCase()){
+            return "minusculas";
+        }else{
+            return "ambas";
+        }
+    }
+
+    </script>
+    
+</body>
+</html>
