@@ -45,3 +45,39 @@ cambio = num3.splice(0,3,8,8,8);
 console.log(num3);
 console.log(cambio);
 
+//indexOf para buscar algo en un array y te devuelve la posicion o -1 sino lo encuentra
+//lasIndexOf devuelve el ultimo indice del elemento que coincida con el valor especificado o -1 sino lo encuentra
+
+var letras = new Array();
+letras=["a","b","c","d","f"];
+console.log(letras);
+console.log(letras.indexOf("q"));
+console.log(letras.indexOf("c"));
+console.log(letras.indexOf("d"));
+
+console.log(letras.lastIndexOf("d"));
+
+//reverse() devuelve un arry al contrario
+console.log(letras);
+console.log(letras.reverse());
+//.join() une todos los elementos de un array y le pone un separador que yo le indique
+console.log(letras.reverse());
+console.log(letras.join("_"));
+console.log(letras.join("-"));
+console.log(letras.join("&"));
+//concat() une dos o mas array y cualquier valor entre ""
+var nombres = new Array();
+var nombres2 = new Array();
+var nombres3 = new Array();
+nombres=["Cecilie","Lone"];
+nombres2=["emil","tobias","linus"];
+nombres3=["robin","morgan"];
+console.log(nombres);
+console.log(nombres2);
+console.log(nombres3);
+console.log(nombres.concat(nombres2,nombres3,"kk"));
+//toString() devuelve el array entero
+let numeritos = new Array();
+numeritos=[1,2,3,4,5];
+console.log(numeritos);
+console.log(numeritos.toString());
