@@ -31,7 +31,7 @@ function diputados(nombre,apellidos,dni,edad,partido){
 
     this.setDni = function(dni){
         var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
-
+        
         dni=dni.replaceAll(" ","");
 
         let numerodni=0;
