@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="text">Introduce un texto</label><br></br>
+    <textarea name="textarea" id=frase rows="5" cols="10"></textarea><br>
+    <button  onclick="funcion()">Aceptar</button>
+
+    <script>
+        function funcion(){
+            var text="";
+            text=document.getElementById("frase").value;
+            text=text.toLowerCase();
+            array = new Array();
+            array = text.split(" ");
+
+            document.write("Numero de palabras: "+array.length+"<br>" );
+            document.write("Primera palabra: "+array[0]+"<br>");
+            document.write("Ultima Palabra: "+array[(array.length-1)]+"<br>");
+            document.write("El texto introducido colocado al reves"+"<br>");
+            document.write(array.reverse()+"-");
+            document.write("<br>");
+
+            var ordenartext = new Array();
+            document.write("Palabras del texto ordenadas de la 'a' a la 'z'"+"<br>");
+            array.sort();
+
+            for (let x = 0; x < array.length; x++) {
+                
+                document.write(array[x]+"-")
+                
+            }
+            document.write("<br>")
+
+            document.write("Palabras del texto ordenadas de la 'z' a la 'a'"+"<br>");
+            document.write(array.reverse()+"-");
+
+
+        }
+    </script>
+</body>
+</html>

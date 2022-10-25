@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text;
+        var textbusca;
+        var error=false;
+        do{
+            error=false;
+            text=prompt("Introduzca una frase o palabra");
+            if(text.length==0){
+                error=true;
+                alert=("error");
+            }
+
+        }while(error);
+        error=false;
+        do{
+            error=false;
+            textbusca=prompt("Introduzca una palabra o frase a buscar");
+            if(textbusca.length==0){
+                error=true;
+                alert=("error");
+            }
+
+        }while(error);
+
+        var cont=0;
+        var encontrada=0;
+        var cortatext=text;
+
+        do{
+            encontrada=0;
+
+            encontrada=cortatext.indexOf(textbusca);
+
+            if(encontrada>=0){
+                cont++;
+                cortatext=cortatext.replace(textbusca,"");
+            }
+        }while(encontrada>=0)
+ 
+        document.write("La cadena se repite: "+cont);
+
+    </script>
+</body>
+</html>

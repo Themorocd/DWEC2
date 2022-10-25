@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var base;
+        var exponente;
+        var error=false;
+
+        do{
+            error=false;
+            base=prompt("Introduzca un numero: ");
+            if(isNaN(base) || base.length==0){
+                error=true;
+                alert("Error");
+            }
+        }while(error)
+        error=false;
+        do{
+            error = false;
+            exponente=prompt("Introduzca un numero");
+            if(isNaN(exponente) || exponente.length==0){
+                error=true;
+                alert("error");
+            }
+        }while(error);
+        
+        var solucion;
+        solucion=base**exponente;
+        document.write(solucion);
+
+    </script>
+</body>
+</html>

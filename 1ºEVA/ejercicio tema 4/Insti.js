@@ -1,12 +1,13 @@
-
+var institutoA = new Instituto("CDP Jose Cabrera","trebujena","15706");
+var agrecursoyoferta = new agregarCursoYoferta("1","ENFERMERIA");
 
 function Instituto (nombre,poblacion,codigoPostal){
     this.nombre=nombre;
     this.poblacion=poblacion;
     this.codigoPostal=codigoPostal;
     this.tutores = new Array();//es un array bidimensional
-}
-var institutoA = new Instituto("CDP Jose Cabrera","trebujena","15706");
+
+
 
 //agregarOfertaycurso(curso,oferta)
 
@@ -68,7 +69,7 @@ this.imprimotablatutor=function(){
     }
     document.write("</table>");
 };
-/*
+
 //imprime nombre(devuelve nombre del insti)
 this.imprimeNombre = function(){
     return (this.nombre);
@@ -81,6 +82,8 @@ this.imprimepoblacion=function(){
 this.imprimeCodigoPostal = function(){
     return (this.codigoPostal);
 };
+}
 
-//document.write("El instituto A se llama "+institutoA.imprimeNombre()+ "esta en"+ institutoA.imprimepoblacion()+"<br>");
-console.log("El instituto A se llama "+institutoA.imprimeNombre()+"esta en "+institutoA.imprimepoblacion()+"<br>");*/
+document.write("El instituto A se llama: "+institutoA.imprimeNombre()+ " esta en "+ institutoA.imprimepoblacion()+"<br>");
+console.log("El instituto A se llama "+institutoA.imprimeNombre()+"esta en "+institutoA.imprimepoblacion()+"<br>");
+console.log(agrecursoyoferta.agregarCursoYoferta);
