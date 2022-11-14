@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="cambiofuente()">
+    
+    <script type="text/javascript" src="ejercicio10.js"></script>
+    <div class="textos">
+        <div class="box1">
+            <h3>Fuentes</h3>
+            <div class="fuentes">
+                <select id="fuentes" size="6" onclick="cambiofuente()">
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Gill Sans">Gill Sans</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Courier">Courier</option> 
+                </select>
+            </div>
+        </div>
+        <div class="box2">
+            <h3>Estilos</h3>
+            <div class="estilos">
+                <select id="estilos" size="3" onclick="cambioestilo()">
+                    <option value="normal">Normal</option>
+                    <option value="bold">Negrita</option>
+                    <option value="oblique">Cursiva</option>
+                </select>
+            </div>
+        </div> 
+
+        <div class="box3">
+            <h3>Color</h3>
+            <div class="colores">
+                <select id="colores" size="6" onclick="cambiocolor()">
+                    <option value="red">Rojo</option>
+                    <option value="black">Negro</option>
+                    <option value="green">Verde</option>
+                    <option value="blue">Azul</option>
+                    <option value="yellow">Amarillo</option>
+                    <option value="pink">Rosa</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="box4">
+            <h3>Tamaño</h3>
+            <div class="sizes">
+                <select id="sizes" size="6" onclick="cambiotamaño()">
+                    <option value="10px">10</option>
+                    <option value="15px">15</option>
+                    <option value="20px">20</option>
+                    <option value="25px">25</option>
+                    <option value="30px">30</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="text" id="idtext">
+        <p>Mira como cambio al tocar arriba</p>
+    </div>
+</body>
+</html>
