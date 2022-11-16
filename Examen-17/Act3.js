@@ -39,16 +39,16 @@ function ocultar(){
 
         case "enlace_2":
 
-        if(enlace_2){
+        if(enlace2){
 
-            document.getElementById("contenido_2").style.display="none";
+            document.getElementById("contenidos_2").style.display="none";
             document.getElementById(this.id).innerHTML="Mostrar Contenido";
 
             enlace2=false;
 
         }else{
 
-            document.getElementById("contenido_2").style.display="block";
+            document.getElementById("contenidos_2").style.display="block";
             document.getElementById(this.id).innerHTML="Ocultar Contenido";
 
             enlace2=true;
@@ -61,14 +61,14 @@ function ocultar(){
 
         if(enlace3){
 
-            document.getElementById("contenido_3").style.display="none";
+            document.getElementById("contenidos_3").style.display="none";
             document.getElementById(this.id).innerHTML="Mostrar Contenido";
 
             enlace3=false;
 
         }else{
 
-            document.getElementById("contenido_3").style.display="block";
+            document.getElementById("contenidos_3").style.display="block";
             document.getElementById(this.id).innerHTML="Ocultar Contenido";
 
             enlace3=true;
