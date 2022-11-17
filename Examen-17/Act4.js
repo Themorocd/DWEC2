@@ -1,4 +1,4 @@
 function cambiafondo(imagen){
     let cuerpo=document.getElementById("fondo");
-    cuerpo.style.backgroundOrigin=imagen;
+    cuerpo.style.backgroundColor=imagen;
 }
