@@ -3,8 +3,8 @@ Primero declaro las coordenadas, en este caso x e y
 */
 let x=0;//esta se mueve por left
 let y=0;//esta se mueve por top
-var ancho = window.screen.width;
-var alto = window.screen.height;
+var ancho = outerWidth;
+var alto = outerHeight;
 /*
 enganchamos el id del elemento a mover
 */
@@ -17,10 +17,10 @@ function muevo(event){
 el codigo numero de las teclas derecha:39,izq:37,arriba:38,abajo:49
 */
     if(event.keyCode=='39'){//derecha
-        if(x==ancho-100){
+        if(x>=ancho){
         
         }else{
-            x=x+10;
+            x=x+20;
         caja.style.left=x+'px';
         }
         
@@ -29,7 +29,7 @@ el codigo numero de las teclas derecha:39,izq:37,arriba:38,abajo:49
         if(x==0){
             
         }else{
-            x=x-10;
+            x=x-20;
             caja.style.left=x+'px';
         }
         
@@ -38,16 +38,16 @@ el codigo numero de las teclas derecha:39,izq:37,arriba:38,abajo:49
         if(y==0){
             
         }else{
-            y=y+10;
+            y=y+20;
         caja.style.top=(-y)+'px';
         }
         
     }
     if(event.keyCode=='40'){//abajo
-        if(y==alto-240){
+        if(y>alto-200){
            
         }else{
-            y=y-10;
+            y=y-20;
             caja.style.top=(-y)+'px';
         }
         
