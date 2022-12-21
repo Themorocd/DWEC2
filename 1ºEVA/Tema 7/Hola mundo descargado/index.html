@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descarga de archivo en servidor</h1>
+	<button id="btnDescargarArchivo">Descargar archivo</button>
+	
+	<script>
+		function descargarArchivo() {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					alert(xhr.responseText);
+				}else{
+                    alert(xhr.readyState);//cada vez que cambie el valor de "readyState", se mostrará un alert con el nuevo valor.
+                }
+			};
+			xhr.open("GET", "http://localhost/ajax/holamundo.txt", true);
+			xhr.send();
+		}
+		
+		document.getElementById("btnDescargarArchivo").addEventListener("click", descargarArchivo);
+	</script>
+</body>
+</html>
