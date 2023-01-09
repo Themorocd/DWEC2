@@ -1,0 +1,8 @@
+{
+	"mensaje": "Este es un dato de ejemplo",
+	"parametros": {
+		"telefono": "956236598",
+		"codigopostal": "1500",
+		"fechanacimiento": "28-11-2013"
+	}
+}

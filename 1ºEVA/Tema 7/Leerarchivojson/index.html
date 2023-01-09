@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lectura de archivo JSON en servidor</h1>
+	<button id="btnLeerArchivo">Leer archivo</button>
+	
+	<div id="contenido"></div>
+	
+	<script>
+		function leerArchivo() {
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var datos = JSON.parse(xhr.responseText);
+					
+					var contenido = "<p>Mensaje: " + datos.mensaje + "</p>" +
+									"<p>Teléfono: " + datos.parametros.telefono + "</p>" +
+									"<p>Código postal: " + datos.parametros.codigopostal + "</p>" +
+					                "<p>Fecha de nacimiento: " + datos.parametros.fechanacimiento + "</p>";
+					
+					document.getElementById("contenido").innerHTML = contenido;
+				}
+			};
+			xhr.open("GET", "http://localhost/ajax/datosJSON.json", true);
+			xhr.send();
+		}
+		
+		document.getElementById("btnLeerArchivo").addEventListener("click", leerArchivo);
+	</script>
+</body>
+</html>
