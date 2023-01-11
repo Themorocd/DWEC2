@@ -28,6 +28,7 @@
 				}
 			};
 			xhr.open("GET", "http://localhost/ajax/datosJSON.json", true);
+			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');//El método setRequestHeader establece un encabezado en la solicitud.
 			xhr.send();
 		}
 		
