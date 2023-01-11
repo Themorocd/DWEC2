@@ -42,6 +42,7 @@
 				}
 			};
 			xhr.open("GET", "http://localhost/ajax/datosXML.xml", true);//esta línea abre la solicitud HTTP para obtener el archivo XML desde el servidor local.
+			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');//El método setRequestHeader establece un encabezado en la solicitud.
 			xhr.send();//esta línea envía la solicitud HTTP.
 		}
 		
